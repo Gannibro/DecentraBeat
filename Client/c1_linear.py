@@ -22,4 +22,11 @@ model.compile(optimizer=adam_optimizer,
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
+# Loading dataset
+df = pd.read_csv("./client1.csv")
+y_train = df['cardio']
+x_train = df.drop(columns=['cardio','id'], axis=1)
 
+df_test =  pd.read_csv("./test.csv")
+y_test = df_test['cardio']
+x_test = df_test.drop(columns=['cardio','id'], axis=1)
