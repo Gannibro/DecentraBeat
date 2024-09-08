@@ -23,7 +23,7 @@ model.compile(optimizer=adam_optimizer,
               metrics=['accuracy'])
 
 # Loading dataset
-df = pd.read_csv("./client1.csv")
+df = pd.read_csv("./client3.csv")
 y_train = df['cardio']
 x_train = df.drop(columns=['cardio','id'], axis=1)
 
